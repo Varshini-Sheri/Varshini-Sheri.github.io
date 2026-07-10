@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Varshini Sheri | Portfolio</title>
+  <meta name="description" content="Portfolio of Varshini Sheri — Software Engineer focused on agentic AI systems, backend engineering, distributed systems, and cybersecurity automation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #000;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .accent {
+      color: #ffbd39;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      margin-right: 12px;
+      margin-top: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #ffbd39;
+      color: #111;
+      border: 1px solid #ffbd39;
+    }
+
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      color: #d4d4d4;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: #ffbd39;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 74px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 78% 45%, rgba(255, 189, 57, 0.22), transparent 28%),
+                  radial-gradient(circle at 12% 18%, rgba(59, 130, 246, 0.18), transparent 28%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero h5 {
+      color: #ffbd39;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5.1rem);
+      line-height: 1.08;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .typing-line {
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-weight: 700;
+      min-height: 48px;
+      margin-bottom: 20px;
+    }
+
+    #typing-text {
+      color: #fff;
+      border-right: 3px solid #ffbd39;
+      padding-right: 6px;
+    }
+
+    .hero p {
+      color: #bdbdbd;
+      font-size: 1.02rem;
+      max-width: 720px;
+      margin-bottom: 12px;
+    }
+
+    .hero-card {
+      border: 1px solid rgba(255,255,255,0.13);
+      background: rgba(255,255,255,0.045);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.45);
+    }
+
+    .profile-placeholder {
+      height: 360px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #181818, #080808);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #8d8d8d;
+      padding: 24px;
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 54px;
+      position: relative;
+    }
+
+    .heading .big {
+      position: absolute;
+      left: 50%;
+      top: -50px;
+      transform: translateX(-50%);
+      font-size: clamp(4rem, 12vw, 8rem);
+      color: rgba(255,255,255,0.06);
+      font-weight: 800;
+      z-index: -1;
+      white-space: nowrap;
+    }
+
+    .heading h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .heading p {
+      color: #aaa;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .about-box, .resume-card, .project-card, .contact-card, .skill-card {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .about-detail {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #cfcfcf;
+      font-size: 0.95rem;
+    }
+
+    .about-detail strong {
+      color: #fff;
+    }
+
+    .skill-row {
+      margin-top: 20px;
+    }
+
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .bar {
+      height: 9px;
+      background: #262626;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      background: #ffbd39;
+      border-radius: 999px;
+    }
+
+    .about-text p {
+      color: #bdbdbd;
+      margin-bottom: 18px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 22px;
+    }
+
+    .about-list li {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 14px;
+      padding: 9px 0;
+      color: #bdbdbd;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .about-list strong {
+      color: #fff;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .stat {
+      background: #111;
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat h3 {
+      color: #ffbd39;
+      font-size: 2.1rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: #bdbdbd;
+      font-size: 0.9rem;
+    }
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .resume-card .date {
+      color: #ffbd39;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .resume-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .resume-card .place {
+      color: #aaa;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .resume-card .stack {
+      color: #7d7d7d;
+      font-size: 0.82rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .resume-card ul {
+      margin-left: 18px;
+      color: #c7c7c7;
+    }
+
+    .resume-card li {
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+    }
+
+    .subsection-title {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #ffbd39;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .project-card {
+      padding: 0;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,189,57,0.45);
+    }
+
+    .project-img {
+      height: 150px;
+      background: linear-gradient(145deg, #1f2937, #050505);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #ffbd39;
+      font-weight: 700;
+      padding: 24px;
+      transition: transform 0.35s ease;
+    }
+
+    .project-card:hover .project-img {
+      transform: scale(1.06);
+    }
+
+    .project-body {
+      padding: 22px;
+    }
+
+    .project-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .project-body p {
+      color: #bdbdbd;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      font-size: 0.72rem;
+      color: #111;
+      background: #ffbd39;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card h3 {
+      color: #ffbd39;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .skill-card p {
+      color: #bdbdbd;
+      font-size: 0.9rem;
+    }
+
+    .github-banner {
+      margin-top: 70px;
+      padding: 60px 28px;
+      border-radius: 26px;
+      background: linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+                  radial-gradient(circle at 80% 20%, rgba(255,189,57,0.35), transparent 30%), #111;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .github-banner h2 {
+      font-size: 2.1rem;
+      margin-bottom: 10px;
+    }
+
+    .github-banner p {
+      color: #bdbdbd;
+      max-width: 660px;
+      margin: 0 auto 12px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      text-align: center;
+    }
+
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      background: #1d1d1d;
+      color: #ffbd39;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .contact-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .contact-card p, .contact-card a {
+      color: #bdbdbd;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 34px 0;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 950px) {
+      .hero-grid,
+      .about-grid,
+      .resume-grid,
+      .project-grid,
+      .contact-grid,
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-card {
+        display: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .resume-grid,
+      .project-grid,
+      .contact-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .about-list li,
+      .about-detail {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Varshini Sheri</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <h5>Hello!</h5>
+        <h1>I'm <span class="accent">Varshini Sheri</span></h1>
+        <div class="typing-line"><span id="typing-text"></span></div>
+        <p>
+          Software engineer with hands-on experience building production-grade agentic AI systems, RAG pipelines,
+          and cloud-native infrastructure on Azure and AWS, with applied exposure to cybersecurity automation and
+          enterprise risk analytics.
+        </p>
+        <p>
+          I build systems that connect LLM agents, APIs, distributed data pipelines, and cloud infrastructure into
+          secure, production-ready products.
+        </p>
+        <a class="btn btn-primary" href="#" target="_blank">LinkedIn</a>
+        <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile-placeholder">
+          <div>
+            <h2 class="accent">Agentic AI + Backend + Security</h2>
+            <p style="margin-top: 12px; color:#aaa;">Replace this block with your professional photo later: <br><strong>images/profile.png</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="heading">
+        <h1 class="big">About</h1>
+        <h2>About Me</h2>
+        <p>A practical engineer who enjoys building reliable systems at the intersection of agentic AI, backend engineering, and security automation.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <div class="about-detail"><strong>Name:</strong><span>Varshini Sheri</span></div>
+          <div class="about-detail"><strong>Location:</strong><span>Chicago, IL, USA</span></div>
+          <div class="about-detail"><strong>Profile:</strong><span>Software Engineering, Agentic AI, Backend, Security Automation</span></div>
+          <div class="about-detail"><strong>Education:</strong><span>MS Computer Science, UIC (GPA 3.8)</span></div>
+
+          <div class="skill-row">
+            <div class="skill-label"><span>Python &amp; Backend Engineering</span><span>95%</span></div>
+            <div class="bar"><div class="fill" style="width:95%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Agentic AI &amp; LLM Systems</span><span>90%</span></div>
+            <div class="bar"><div class="fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Cloud Infrastructure (Azure/AWS)</span><span>85%</span></div>
+            <div class="bar"><div class="fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Security Automation</span><span>80%</span></div>
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p>
+            I'm finishing my Master's in Computer Science at the University of Illinois Chicago, with hands-on
+            experience across agentic AI systems, backend development, distributed data infrastructure, and
+            security automation.
+          </p>
+          <p>
+            My recent work spans a distributed GraphRAG search system over research papers, a multi-agent
+            NL-to-SQL platform, a Byzantine fault-tolerant object storage system, and security automation
+            pipelines built during my time in enterprise SecOps.
+          </p>
+
+          <ul class="about-list">
+            <li><strong>Programming:</strong><span>Python, Java, C/C++, C#, Bash, JavaScript, TypeScript, SQL</span></li>
+            <li><strong>Backend:</strong><span>Django, Flask, RESTful APIs, GraphQL, Azure Functions, Spring Boot</span></li>
+            <li><strong>AI / ML:</strong><span>PyTorch, TensorFlow, Hugging Face, LangChain, LangGraph, RAG, PEFT, CUDA</span></li>
+            <li><strong>Cloud / Security:</strong><span>Azure, AWS (EC2, EKS, EMR, S3), Docker, Kubernetes, Akamai WAF, Qualys, Wiz</span></li>
+          </ul>
+
+          <a class="btn btn-primary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><h3>3.8</h3><span>MS CS GPA</span></div>
+        <div class="stat"><h3>3</h3><span>Engineering Roles</span></div>
+        <div class="stat"><h3>80%</h3><span>Report Generation Time Cut</span></div>
+        <div class="stat"><h3>25%</h3><span>GraphRAG Relevance Gain</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="container">
+      <div class="heading">
+        <h1 class="big">Resume</h1>
+        <h2>Resume</h2>
+        <p>Experience across agentic AI systems, backend services, distributed infrastructure, and security automation.</p>
+      </div>
+
+      <h2 class="subsection-title">Experience</h2>
+      <div class="resume-grid">
+        <div class="resume-card">
+          <span class="date">July 2025 – Present</span>
+          <h3>Software Developer</h3>
+          <span class="place">UIC College of Medicine · Chicago, IL</span>
+          <span class="stack">JavaScript, React, REST APIs, MySQL</span>
+          <ul>
+            <li>Built modular React components and UI modules across 20+ production websites, making layout decisions for new pages and revising existing pages for visual consistency, with attention to accessibility (WCAG).</li>
+            <li>Automated institutional data processing and reporting workflows using shell scripting, reducing manual reporting time by 60%.</li>
+          </ul>
+        </div>
+
+        <div class="resume-card">
+          <span class="date">Jan 2025 – Dec 2025</span>
+          <h3>AI Engineer</h3>
+          <span class="place">G19 Studios · Chicago, IL</span>
+          <span class="stack">Python, React, Azure Functions, Cosmos DB, LangChain, LangGraph</span>
+          <ul>
+            <li>Architected a multi-agent NL-to-SQL system with LangGraph, orchestrating query execution over operational databases and reducing report generation time by 80%.</li>
+            <li>Built a RAG pipeline over conversational history using Cosmos DB for session memory retrieval, improving response accuracy by 45% for analytical queries.</li>
+            <li>Implemented async Azure Functions orchestration with retry logic, governance checks, and query safety validation to evaluate and constrain multi-step execution reliably at scale.</li>
+            <li>Integrated the agent pipeline into CI/CD workflows, including integration tests validating API contracts and end-to-end execution accuracy, reducing manual release effort and deployment errors.</li>
+          </ul>
+        </div>
+
+        <div class="resume-card">
+          <span class="date">Jan 2024 – June 2024</span>
+          <h3>Software Development Engineer</h3>
+          <span class="place">MSCI · Pune, India</span>
+          <span class="stack">Python, Azure Functions, Akamai WAF, Layer7, Qualys, Wiz</span>
+          <ul>
+            <li>Designed and deployed event-driven Azure Functions in Python to automate multi-region Akamai WAF policy updates, reducing manual SecOps effort by 50%. Deployed via Azure DevOps CI/CD.</li>
+            <li>Implemented RESTful integration of ServiceNow with Layer7 workflows, reducing MTTA for critical security incidents by 30%. Supported end-to-end incident response.</li>
+            <li>Performed vulnerability management for on-prem and cloud environments (Azure, AWS, GCP); built analysis pipelines over scan outputs to track risk posture and maintain SLA compliance across 6 teams.</li>
+            <li>Prototyped an LLM pipeline over historical incident logs to predict emerging threat models for SecOps automation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <br><br>
+      <h2 class="subsection-title">Education</h2>
+      <div class="resume-grid">
+        <div class="resume-card">
+          <span class="date">Expected May 2026</span>
+          <h3>MS in Computer Science</h3>
+          <span class="place">University of Illinois Chicago · GPA 3.8/4</span>
+          <ul>
+            <li>Coursework included Distributed Cloud Systems and Advanced Database Systems, with coursework projects in GraphRAG architecture and query optimization theory.</li>
+          </ul>
+        </div>
+
+        <div class="resume-card">
+          <span class="date">May 2024</span>
+          <h3>Bachelor's in Computer Science and Engineering</h3>
+          <span class="place">Jawaharlal Nehru Technological University · GPA 8.8/10</span>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:40px;">
+        <a class="btn btn-primary" href="#" target="_blank">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="heading">
+        <h1 class="big">Projects</h1>
+        <h2>Projects</h2>
+        <p>Selected projects across distributed systems, agentic AI, secure infrastructure, and applied ML.</p>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-img">RAGCloud<br>Semantic Search</div>
+          <div class="project-body">
+            <h3>RAGCloud — Distributed Semantic Search System</h3>
+            <p>Distributed RAG search system for research documents; batch and streaming ETL with Spark and Flink, LLM-based evaluation validating a 25% relevance gain over vector-only retrieval, deployed on AWS EMR and EKS.</p>
+            <div class="chips"><span class="chip">Scala</span><span class="chip">Spark</span><span class="chip">Flink</span><span class="chip">AWS</span><span class="chip">Neo4j</span><span class="chip">Lucene</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">Secure Object<br>Storage</div>
+          <div class="project-body">
+            <h3>Secure Distributed Object Storage System</h3>
+            <p>Byzantine fault-tolerant object store using fingerprint verification, quorum voting, and erasure coding; deployed across EC2 instances via FastAPI with Prometheus for real-time node monitoring.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Prometheus</span><span class="chip">AWS</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">LLM<br>Fine-Tuning</div>
+          <div class="project-body">
+            <h3>Conversational LLM Fine-Tuning</h3>
+            <p>Fine-tuned Gemma-3 4B using Unsloth, QLoRA (4-bit quantization), and LoRA adapters on a 100K conversational dataset; response-only training improved fine-tuning accuracy by 83% on a single T4 GPU.</p>
+            <div class="chips"><span class="chip">PyTorch</span><span class="chip">Hugging Face</span><span class="chip">LoRA</span><span class="chip">CUDA</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="github-banner">
+        <h2>More projects on <span class="accent">GitHub</span></h2>
+        <p>I like building systems that combine practical software engineering with agentic AI, distributed infrastructure, and security.</p>
+        <a class="btn btn-primary" href="#" target="_blank">Visit GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="heading">
+        <h1 class="big">Skills</h1>
+        <h2>Technical Skills</h2>
+        <p>A focused stack across backend development, agentic AI systems, distributed computing, cloud, and security.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card"><h3>Programming</h3><p>Python, C/C++, C#, Bash, Java, Spring Boot, SQL, JavaScript, React, TypeScript</p></div>
+        <div class="skill-card"><h3>Backend &amp; APIs</h3><p>Django, Flask, RESTful APIs, GraphQL, Azure Functions, Postman</p></div>
+        <div class="skill-card"><h3>AI / ML</h3><p>Scikit-learn, PyTorch, TensorFlow, Hugging Face, PEFT, LangChain, LangGraph, Neo4j, CUDA</p></div>
+        <div class="skill-card"><h3>Cloud &amp; DevOps</h3><p>Azure, AWS (EC2, S3, EKS, EMR), Docker, Kubernetes, Prometheus, CI/CD Pipelines</p></div>
+        <div class="skill-card"><h3>Security &amp; Networking</h3><p>OAuth 2.0, WAF, Akamai, Nmap, Wireshark, Qualys, Wiz</p></div>
+        <div class="skill-card"><h3>Data &amp; Tools</h3><p>Apache Spark, Flink, Lucene, Hadoop, Snowflake, PostgreSQL, MySQL, MongoDB, Git</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="heading">
+        <h1 class="big">Contact</h1>
+        <h2>Contact Me</h2>
+        <p>Below are the details to reach out to me.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Address</h3>
+          <p>Chicago, IL, USA</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉</div>
+          <h3>Email</h3>
+          <p><a href="mailto:varshinireddysheri@gmail.com">varshinireddysheri@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">☎</div>
+          <h3>Phone</h3>
+          <p>+1 (217) 986-8124</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">in</div>
+          <h3>LinkedIn</h3>
+          <p><a href="#" target="_blank">Add your LinkedIn URL</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Varshini Sheri. Built for GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    const typingText = document.getElementById("typing-text");
+    const words = [
+      "Software Engineer",
+      "Agentic AI Engineer",
+      "Backend Developer",
+      "Distributed Systems Builder",
+      "Security Automation Engineer"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      const current = words[wordIndex];
+
+      if (!deleting) {
+        typingText.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(typeLoop, 1200);
+          return;
+        }
+      } else {
+        typingText.textContent = current.slice(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+
+      setTimeout(typeLoop, deleting ? 55 : 95);
+    }
+
+    typeLoop();
+  </script>
+</body>
+</html>
