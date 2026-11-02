@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Varshini Sheri | Portfolio</title>
-  <meta name="description" content="Portfolio of Varshini Sheri — Software Engineer focused on full-stack AI systems, backend engineering, distributed infrastructure, and cybersecurity automation." />
+  <meta name="description" content="Portfolio of Varshini Sheri, a software engineer focused on full-stack AI systems, backend engineering, distributed infrastructure, and cybersecurity automation." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -251,28 +251,8 @@
       color: #fff;
     }
 
-    .skill-row {
-      margin-top: 20px;
-    }
-
-    .skill-label {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-    }
-
-    .bar {
-      height: 9px;
-      background: #262626;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .fill {
-      height: 100%;
-      background: #ffbd39;
-      border-radius: 999px;
+    .about-detail a {
+      color: #ffbd39;
     }
 
     .about-text p {
@@ -365,6 +345,12 @@
       font-size: 0.93rem;
     }
 
+    .resume-card a.cred {
+      color: #ffbd39;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
     .subsection-title {
       font-size: 2rem;
       margin-bottom: 24px;
@@ -375,7 +361,7 @@
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 26px;
     }
 
@@ -496,8 +482,10 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      max-width: 640px;
+      margin: 0 auto;
     }
 
     .contact-card {
@@ -527,6 +515,7 @@
     .contact-card p, .contact-card a {
       color: #bdbdbd;
       font-size: 0.9rem;
+      overflow-wrap: anywhere;
     }
 
     footer {
@@ -603,8 +592,8 @@
           backend services, and distributed infrastructure on Azure and AWS, with applied exposure to cybersecurity automation.
         </p>
         <p>
-          I architect complete systems that connect LLM agents, backend APIs, data pipelines, cloud infrastructure,
-          and security controls into resilient, production-ready products.
+          I build complete systems that connect LLM agents, backend APIs, data pipelines, cloud infrastructure,
+          and security controls into reliable, production-ready products.
         </p>
         <a class="btn btn-primary" href="https://linkedin.com/in/varshini-sheri" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-outline" href="https://github.com/Varshini-Sheri" target="_blank" rel="noopener">GitHub</a>
@@ -634,44 +623,28 @@
           <div class="about-detail"><strong>Name:</strong><span>Varshini Sheri</span></div>
           <div class="about-detail"><strong>Location:</strong><span>Chicago, IL, USA</span></div>
           <div class="about-detail"><strong>Profile:</strong><span>Full-Stack AI Engineer, Backend Systems, Distributed Infrastructure</span></div>
-          <div class="about-detail"><strong>Education:</strong><span>MS Computer Science, UIC (GPA 3.8)</span></div>
-
-          <div class="skill-row">
-            <div class="skill-label"><span>Backend Engineering</span><span>95%</span></div>
-            <div class="bar"><div class="fill" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-label"><span>Agentic AI & LLM Systems</span><span>90%</span></div>
-            <div class="bar"><div class="fill" style="width:90%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-label"><span>Distributed Systems & Data Pipelines</span><span>90%</span></div>
-            <div class="bar"><div class="fill" style="width:90%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-label"><span>Cloud Infrastructure (Azure/AWS)</span><span>85%</span></div>
-            <div class="bar"><div class="fill" style="width:85%"></div></div>
-          </div>
+          <div class="about-detail"><strong>Education:</strong><span>MS Computer Science, UIC (GPA 3.8), May 2026</span></div>
+          <div class="about-detail"><strong>Certified:</strong><span><a href="https://learn.microsoft.com/api/credentials/share/en-us/VarshiniSheri-3107/A733D44C443070AC?sharingId=770C59A3D53053B9" target="_blank" rel="noopener">Microsoft Azure AI Apps and Agents Developer Associate</a></span></div>
         </div>
 
         <div class="about-text">
           <p>
-            I'm finishing my Master's in Computer Science at the University of Illinois Chicago. I architect
+            I completed my Master's in Computer Science at the University of Illinois Chicago in May 2026. I build
             complete systems at the intersection of AI orchestration, backend development, distributed infrastructure,
             and security automation.
           </p>
           <p>
-            My recent work spans a multi-agent NL-to-SQL platform with LangGraph orchestration and Azure
-            Functions (reducing report generation time by 80%), a distributed GraphRAG system over research papers
-            using Spark and Flink, a Byzantine fault-tolerant object storage system with Reed-Solomon erasure coding,
-            and security automation pipelines built during my time at MSCI SecOps.
+            My recent work spans a multi-agent NL-to-SQL platform with LangChain/LangGraph and Azure
+            Functions (reducing report generation time by 80%), an operations platform for a 300-person research forum,
+            a distributed GraphRAG system over research papers using Spark and Flink, an LLM-powered candidate search
+            platform, and security automation pipelines built during my time at MSCI.
           </p>
 
           <ul class="about-list">
-            <li><strong>Programming:</strong><span>Python, Java, Scala, Bash, JavaScript, TypeScript, C/C++, SQL</span></li>
-            <li><strong>Backend &amp; APIs:</strong><span>Spring Boot, Django, Flask, RESTful APIs, GraphQL, Azure Functions</span></li>
-            <li><strong>AI / ML:</strong><span>LangChain, LangGraph, PyTorch, Hugging Face, RAG, PEFT, Neo4j, CUDA</span></li>
-            <li><strong>Distributed &amp; Cloud:</strong><span>Spark, Flink, Kubernetes, Docker, Azure, AWS (EC2, EKS, EMR, S3), Prometheus</span></li>
+            <li><strong>Languages:</strong><span>Python, Java, TypeScript, JavaScript, Scala, SQL</span></li>
+            <li><strong>AI &amp; ML:</strong><span>LangChain, LangGraph, RAG, GraphRAG, Fine-Tuning (LoRA/QLoRA), PyTorch</span></li>
+            <li><strong>Full-Stack:</strong><span>Spring Boot, FastAPI, Next.js, React, REST APIs, GraphQL</span></li>
+            <li><strong>Data &amp; Cloud:</strong><span>PostgreSQL, Cosmos DB, Neo4j, Spark, Flink, AWS, Azure, Kubernetes</span></li>
           </ul>
 
           <a class="btn btn-primary" href="#contact">Contact Me</a>
@@ -699,12 +672,12 @@
       <div class="resume-grid">
         <div class="resume-card">
           <span class="date">July 2025 – Present</span>
-          <h3>Software Developer</h3>
+          <h3>Software Engineer</h3>
           <span class="place">UIC College of Medicine · Chicago, IL</span>
-          <span class="stack">JavaScript, React, REST APIs, MySQL</span>
+          <span class="stack">React, TypeScript, JavaScript, K3s, AWS</span>
           <ul>
-            <li>Built modular React components and UI modules across 20+ production websites, making layout decisions for new pages and revising existing pages for visual consistency, with attention to accessibility (WCAG).</li>
-            <li>Automated institutional data processing and reporting workflows using shell scripting, reducing manual reporting time by 60%.</li>
+            <li>Built modular React components and UI modules across 20+ production websites, and maintained existing software architecture with attention to accessibility (WCAG).</li>
+            <li>Built and deployed a full-stack operations platform (React/TypeScript, K3s) on AWS to coordinate a 300-person research forum, reducing manual operational effort by 80%.</li>
           </ul>
         </div>
 
@@ -714,10 +687,10 @@
           <span class="place">G19 Studios · Chicago, IL</span>
           <span class="stack">Python, React, Azure Functions, Cosmos DB, LangChain, LangGraph, CI/CD</span>
           <ul>
-            <li>Architected a multi-agent NL-to-SQL system with LangGraph, orchestrating query execution over operational databases and reducing report generation time by 80%.</li>
-            <li>Built a RAG pipeline over conversational history using Cosmos DB for session memory retrieval, improving response accuracy by 45% for analytical queries.</li>
-            <li>Implemented async Azure Functions orchestration with retry logic, governance checks, and query safety validation to evaluate and constrain multi-step execution reliably at scale.</li>
-            <li>Integrated the agent pipeline into CI/CD workflows, including integration tests validating API contracts and end-to-end execution accuracy, reducing manual release effort and deployment errors.</li>
+            <li>Architected a multi-agent NL-to-SQL system with LangChain/LangGraph that allows business users to interact with operational databases, reducing report generation time by 80%.</li>
+            <li>Designed a full-stack AI application: data modeling for query execution, REST API backend for agent orchestration, React frontend for user interaction.</li>
+            <li>Built a RAG pipeline with LLM-based semantic retrieval over conversational history using Cosmos DB, improving response accuracy by 45% for analytical queries.</li>
+            <li>Implemented async Azure Functions with governance checks and safety validation; integrated into CI/CD pipelines with integration tests validating API contracts.</li>
           </ul>
         </div>
 
@@ -727,19 +700,19 @@
           <span class="place">MSCI · Pune, India</span>
           <span class="stack">Python, Azure Functions, Akamai WAF, Layer7, Qualys, Wiz, DevOps</span>
           <ul>
-            <li>Designed and deployed event-driven Azure Functions in Python to automate multi-region Akamai WAF policy updates, reducing manual SecOps effort by 50%. Deployed via Azure DevOps CI/CD.</li>
-            <li>Implemented RESTful integration of ServiceNow with Layer7 workflows, reducing MTTA for critical security incidents by 30%. Supported end-to-end incident response.</li>
-            <li>Performed vulnerability management for on-prem and cloud environments (Azure, AWS, GCP); built analysis pipelines over scan outputs to track risk posture and maintain SLA compliance across 6 teams.</li>
-            <li>Prototyped an LLM pipeline over historical incident logs to predict emerging threat models for SecOps automation.</li>
+            <li>Designed and deployed event-driven Azure Functions (Python) to automate multi-region WAF policy updates, reducing SecOps effort by 50%. Deployed via Azure DevOps CI/CD.</li>
+            <li>Implemented RESTful integrations with enterprise software (ServiceNow, Layer7) for incident response workflows, reducing MTTA by 30%.</li>
+            <li>Built analysis pipelines for vulnerability management across cloud environments (AWS, Azure, GCP), supporting compliance and SLA tracking.</li>
+            <li>Prototyped an LLM pipeline for security automation, working across enterprise infrastructure.</li>
           </ul>
         </div>
       </div>
 
       <br><br>
-      <h2 class="subsection-title">Education</h2>
+      <h2 class="subsection-title">Education &amp; Certifications</h2>
       <div class="resume-grid">
         <div class="resume-card">
-          <span class="date">Expected May 2026</span>
+          <span class="date">May 2026</span>
           <h3>MS in Computer Science</h3>
           <span class="place">University of Illinois Chicago · GPA 3.8/4</span>
           <ul>
@@ -751,6 +724,13 @@
           <span class="date">May 2024</span>
           <h3>Bachelor's in Computer Science and Engineering</h3>
           <span class="place">Jawaharlal Nehru Technological University · GPA 8.8/10</span>
+        </div>
+
+        <div class="resume-card">
+          <span class="date">Oct 2026</span>
+          <h3>Microsoft Certified: Azure AI Apps and Agents Developer Associate</h3>
+          <span class="place">Microsoft</span>
+          <a class="cred" href="https://learn.microsoft.com/api/credentials/share/en-us/VarshiniSheri-3107/A733D44C443070AC?sharingId=770C59A3D53053B9" target="_blank" rel="noopener">Verify credential →</a>
         </div>
       </div>
 
@@ -770,22 +750,22 @@
 
       <div class="project-grid">
         <div class="project-card">
-          <div class="project-img">Multi-Agent<br>NL-to-SQL</div>
+          <div class="project-img">GraphRAG<br>Distributed Search</div>
           <div class="project-body">
-            <h3>Multi-Agent NL-to-SQL System</h3>
-            <p>LangGraph-orchestrated multi-agent platform for conversational SQL generation over operational databases; includes async Azure Functions, Cosmos DB session memory, query safety validation, and end-to-end CI/CD integration. Reduced report generation time by 80%.</p>
-            <div class="chips"><span class="chip">LangGraph</span><span class="chip">Python</span><span class="chip">Azure Functions</span><span class="chip">Cosmos DB</span><span class="chip">CI/CD</span></div>
-            <a class="project-link" href="https://github.com/Varshini-Sheri" target="_blank" rel="noopener">View on GitHub →</a>
+            <h3>RAG Cloud: Distributed Semantic Search System</h3>
+            <p>Distributed RAG search system for research documents, with the full knowledge-graph data pipeline: schema design, data modeling, and batch and streaming ETL with Spark and Flink. Deployed on AWS EMR and EKS with CloudWatch observability; an LLM-based evaluation showed 25% higher query relevance for GraphRAG than vector-only semantic search.</p>
+            <div class="chips"><span class="chip">Scala</span><span class="chip">Flink</span><span class="chip">Spark</span><span class="chip">AWS</span><span class="chip">Neo4j</span><span class="chip">CloudWatch</span></div>
+            <a class="project-link" href="https://github.com/Varshini-Sheri/Graphrag" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-img">GraphRAG<br>Distributed Search</div>
+          <div class="project-img">AI-Powered<br>Candidate Search</div>
           <div class="project-body">
-            <h3>RAGCloud — Distributed Semantic Search</h3>
-            <p>Distributed RAG search system over research documents; batch and streaming ETL with Spark and Flink, LLM-based evaluation validating a 25% relevance gain over vector-only retrieval, deployed on AWS EMR and EKS with CloudWatch monitoring.</p>
-            <div class="chips"><span class="chip">Scala</span><span class="chip">Spark</span><span class="chip">Flink</span><span class="chip">AWS</span><span class="chip">Neo4j</span><span class="chip">Lucene</span></div>
-            <a class="project-link" href="https://github.com/Varshini-Sheri/Graphrag" target="_blank" rel="noopener">View on GitHub →</a>
+            <h3>AI-Powered Candidate Search Platform</h3>
+            <p>Multi-tenant recruiting platform where an LLM turns natural-language requests into PostgreSQL queries, with row-level security isolating each tenant's data. Benchmarked Gemini models and selected Flash-Lite for 94% F1, 2x faster inference, and 1.1s p95 latency.</p>
+            <div class="chips"><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Gemini</span><span class="chip">Stripe</span></div>
+            <a class="project-link" href="https://github.com/Varshini-Sheri/AI-Powered-Candidate-Search-Platform" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
         </div>
 
@@ -793,9 +773,19 @@
           <div class="project-img">Byzantine<br>Fault-Tolerant Storage</div>
           <div class="project-body">
             <h3>Secure Distributed Object Storage</h3>
-            <p>Byzantine fault-tolerant object store using fingerprint verification, quorum voting, and Reed-Solomon erasure coding; deployed across EC2 instances via FastAPI with Prometheus real-time monitoring and comprehensive fault recovery.</p>
-            <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Docker</span><span class="chip">Prometheus</span><span class="chip">AWS</span></div>
+            <p>Byzantine fault-tolerant object store implementing the AVID-FP protocol with Reed-Solomon erasure coding and fingerprint verification. A 5-node Spring Boot cluster on AWS EC2 reconstructs any file from 3 nodes and tolerates one node returning corrupted data.</p>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">REST APIs</span><span class="chip">Docker</span><span class="chip">AWS EC2</span></div>
             <a class="project-link" href="https://github.com/Varshini-Sheri/Secure-Distributed-Object-Store" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">LLM<br>Fine-Tuning</div>
+          <div class="project-body">
+            <h3>Conversational LLM Fine-Tuning</h3>
+            <p>Fine-tuned Gemma-3 4B for multi-turn chat with 4-bit QLoRA via Unsloth, training 0.37% of parameters on the 100K-example FineTome conversational dataset within a single 15 GB T4 GPU, with loss masked to model responses only.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Unsloth</span><span class="chip">Hugging Face TRL</span><span class="chip">CUDA</span></div>
+            <a class="project-link" href="https://github.com/Varshini-Sheri/fine-tune-gemma-unsloth" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
         </div>
       </div>
@@ -817,12 +807,11 @@
       </div>
 
       <div class="skills-grid">
-        <div class="skill-card"><h3>Programming</h3><p>Python, Java, Scala, C/C++, Bash, JavaScript, TypeScript, SQL</p></div>
-        <div class="skill-card"><h3>Backend &amp; APIs</h3><p>Spring Boot, Spring Data JPA, Django, Flask, RESTful APIs, GraphQL, Azure Functions</p></div>
-        <div class="skill-card"><h3>Agentic AI</h3><p>LangChain, LangGraph, PyTorch, Hugging Face, PEFT, RAG Systems, Neo4j, CUDA</p></div>
-        <div class="skill-card"><h3>Distributed Systems</h3><p>Apache Spark, Flink, Kubernetes, Docker, Delta Lake, Hadoop, Prometheus, CI/CD</p></div>
-        <div class="skill-card"><h3>Cloud &amp; DevOps</h3><p>Azure (Functions, AI Search, Cosmos DB), AWS (EC2, S3, EKS, EMR), Azure DevOps</p></div>
-        <div class="skill-card"><h3>Security &amp; Infrastructure</h3><p>OAuth 2.0, JWT, WAF, Akamai, Qualys, Wiz, Nmap, Wireshark, TCP/IP</p></div>
+        <div class="skill-card"><h3>Languages</h3><p>Python, Java, TypeScript, JavaScript, Scala, SQL, PHP, C/C++, Bash</p></div>
+        <div class="skill-card"><h3>AI &amp; ML</h3><p>LLMs, Generative AI, AI Agents, RAG, GraphRAG, LangChain, LangGraph, Prompt Engineering, Fine-Tuning (LoRA/QLoRA), PyTorch, TensorFlow, Hugging Face</p></div>
+        <div class="skill-card"><h3>Full-Stack</h3><p>REST APIs, Microservices, Spring Boot, FastAPI, Flask, Django, Next.js, React, GraphQL, OAuth 2.0</p></div>
+        <div class="skill-card"><h3>Data</h3><p>PostgreSQL, Supabase, MySQL, MongoDB, Cosmos DB, Neo4j, Spark, Flink, Kafka, Delta Lake, ETL</p></div>
+        <div class="skill-card"><h3>Cloud &amp; DevOps</h3><p>AWS (EC2, S3, EKS, EMR, CloudWatch), Azure DevOps, GCP, Docker, Kubernetes, CI/CD, Git, Prometheus</p></div>
       </div>
     </div>
   </section>
@@ -832,24 +821,14 @@
       <div class="heading">
         <h1 class="big">Contact</h1>
         <h2>Contact Me</h2>
-        <p>Reach out via email, phone, or social links below.</p>
+        <p>Reach out by email or connect on LinkedIn.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
-          <div class="contact-icon">📍</div>
-          <h3>Address</h3>
-          <p>Chicago, IL, USA</p>
-        </div>
-        <div class="contact-card">
           <div class="contact-icon">✉</div>
           <h3>Email</h3>
-          <p><a href="mailto:varshinireddysheri@gmail.com">varshinireddysheri@gmail.com</a></p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">☎</div>
-          <h3>Phone</h3>
-          <p>+1 (217) 986-8124</p>
+          <p><a href="mailto:varshinirsheri@gmail.com">varshinirsheri@gmail.com</a></p>
         </div>
         <div class="contact-card">
           <div class="contact-icon">in</div>
